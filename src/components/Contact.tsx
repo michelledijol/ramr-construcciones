@@ -53,20 +53,20 @@ const Contact = () => {
     {
       icon: "📞",
       title: "Teléfono",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["1-829-717-7552"],
       action: "Llamar ahora"
     },
     {
       icon: "📧",
       title: "Email",
-      details: ["info@constructora-roberto.com", "ventas@constructora-roberto.com"],
+      details: ["ramrconstrucciones.srl@gmail.com"],
       action: "Enviar email"
     },
     {
-      icon: "📍",
-      title: "Dirección",
-      details: ["Av. Principal 123", "Ciudad, Estado 12345"],
-      action: "Ver en mapa"
+      icon: "👤",
+      title: "Contacto",
+      details: ["Roberto Martínez", "RAMR Construcciones SRL"],
+      action: "WhatsApp"
     },
     {
       icon: "🕒",
@@ -253,8 +253,15 @@ const Contact = () => {
                         </p>
                       ))}
                       <a 
-                        href="#" 
+                        href={
+                          info.title === "Teléfono" ? "tel:+18297177552" :
+                          info.title === "Email" ? "mailto:ramrconstrucciones.srl@gmail.com" :
+                          info.title === "Contacto" ? "https://wa.me/18297177552" :
+                          "#"
+                        }
                         className="inline-block mt-3 text-constructora-red font-semibold hover:text-constructora-red-dark transition-colors duration-300"
+                        target={info.title === "Contacto" ? "_blank" : undefined}
+                        rel={info.title === "Contacto" ? "noopener noreferrer" : undefined}
                       >
                         {info.action} →
                       </a>
@@ -273,7 +280,7 @@ const Contact = () => {
                 Llámanos directamente para una consulta inmediata
               </p>
               <a 
-                href="tel:+15551234567" 
+                href="tel:+18297177552" 
                 className="inline-block bg-white text-constructora-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
               >
                 Llamar ahora

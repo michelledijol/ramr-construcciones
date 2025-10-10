@@ -9,7 +9,7 @@ interface StickyCTAProps {
 }
 
 const StickyCTA: React.FC<StickyCTAProps> = ({
-  href = '#contacto',
+  href = 'https://wa.me/18297177552',
   onClick,
   children = 'Solicitar Presupuesto',
   hideOnFormVisible = true
@@ -58,7 +58,7 @@ const StickyCTA: React.FC<StickyCTAProps> = ({
         variant="primary"
         href={href}
         onClick={onClick}
-        aria-label="Solicitar presupuesto (barra fija)"
+        aria-label="Solicitar presupuesto por WhatsApp - Roberto Martínez 1-829-717-7552 (barra fija)"
         data-cta="solicitar-presupuesto-sticky"
       >
         {children}

@@ -140,11 +140,13 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, variant }) => {
             flexWrap: 'wrap'
           }}>
             <a 
-              href="#contacto" 
+              href="https://wa.me/18297177552" 
               className="btn btn--primary"
               onClick={onClose}
-              aria-label="Solicitar presupuesto"
+              aria-label="Solicitar presupuesto por WhatsApp - Roberto Martínez 1-829-717-7552"
               data-cta="solicitar-presupuesto-popup"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: 'none',
                 display: 'inline-block'

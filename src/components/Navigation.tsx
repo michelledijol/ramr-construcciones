@@ -58,9 +58,11 @@ const Navigation = () => {
           <div className="desktop-cta">
             <Button
               variant="outline"
-              href="#contacto"
-              aria-label="Solicitar presupuesto"
+              href="https://wa.me/18297177552"
+              aria-label="Solicitar presupuesto por WhatsApp - Roberto Martínez 1-829-717-7552"
               data-cta="solicitar-presupuesto-navbar"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Solicitar Presupuesto
             </Button>
@@ -108,7 +110,7 @@ const Navigation = () => {
                 Contacto
               </a>
               <div style={{ padding: '0.75rem' }}>
-                <a href="#contacto" className="btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
+                <a href="https://wa.me/18297177552" className="btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }} target="_blank" rel="noopener noreferrer" aria-label="Solicitar presupuesto por WhatsApp - Roberto Martínez 1-829-717-7552">
                   Solicitar Presupuesto
                 </a>
               </div>

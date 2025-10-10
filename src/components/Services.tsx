@@ -331,7 +331,10 @@ const Services = () => {
             </p>
             <Button
               variant="primary"
-              href="#contacto"
+              href="https://wa.me/18297177552"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Solicitar presupuesto por WhatsApp - Roberto Martínez 1-829-717-7552"
               style={{
                 background: 'linear-gradient(90deg, #CDA349, #F4D03F)',
                 color: '#ffffff',

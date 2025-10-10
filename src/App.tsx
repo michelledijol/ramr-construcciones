@@ -127,9 +127,11 @@ function App() {
           <div style={{ position: 'relative', marginTop: '2rem' }}>
             <Button
               variant="primary"
-              href="#contacto"
-              aria-label="Iniciar mi proyecto"
+              href="https://wa.me/18297177552"
+              aria-label="Iniciar mi proyecto por WhatsApp - Roberto Martínez 1-829-717-7552"
               data-cta="iniciar-mi-proyecto-final"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Iniciar Mi Proyecto
             </Button>
