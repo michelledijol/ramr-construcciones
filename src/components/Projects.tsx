@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Lightbox from './Lightbox'
 import Button from './Button'
 
@@ -188,22 +188,22 @@ const Projects = () => {
               }}
               onMouseOver={(e) => {
                 if (activeFilter !== filter.key) {
-                  e.target.style.background = '#d4af37'
-                  e.target.style.color = '#1a1a1a'
-                  e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 4px 10px rgba(212,175,55,0.25)'
+                  (e.target as HTMLElement).style.background = '#d4af37'
+                  (e.target as HTMLElement).style.color = '#1a1a1a'
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)'
+                  (e.target as HTMLElement).style.boxShadow = '0 4px 10px rgba(212,175,55,0.25)'
                 } else {
-                  e.target.style.transform = 'translateY(-2px)'
+                  (e.target as HTMLElement).style.transform = 'translateY(-2px)'
                 }
               }}
               onMouseOut={(e) => {
                 if (activeFilter !== filter.key) {
-                  e.target.style.background = 'transparent'
-                  e.target.style.color = '#333333'
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = 'none'
+                  (e.target as HTMLElement).style.background = 'transparent'
+                  (e.target as HTMLElement).style.color = '#333333'
+                  (e.target as HTMLElement).style.transform = 'translateY(0)'
+                  (e.target as HTMLElement).style.boxShadow = 'none'
                 } else {
-                  e.target.style.transform = 'translateY(0)'
+                  (e.target as HTMLElement).style.transform = 'translateY(0)'
                 }
               }}
             >

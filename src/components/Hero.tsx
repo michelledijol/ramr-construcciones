@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from './Button'
 
 const Hero = () => {
@@ -150,16 +150,16 @@ const Hero = () => {
               transition: 'all 0.3s ease'
             }}
             onMouseOver={(e) => {
-              e.target.style.background = '#d4af37'
-              e.target.style.color = '#1a1a1a'
-              e.target.style.textShadow = 'none'
-              e.target.style.transform = 'scale(1.02)'
+              (e.target as HTMLElement).style.background = '#d4af37'
+              (e.target as HTMLElement).style.color = '#1a1a1a'
+              (e.target as HTMLElement).style.textShadow = 'none'
+              (e.target as HTMLElement).style.transform = 'scale(1.02)'
             }}
             onMouseOut={(e) => {
-              e.target.style.background = 'transparent'
-              e.target.style.color = '#d4af37'
-              e.target.style.textShadow = '0 2px 4px rgba(0, 0, 0, 0.4)'
-              e.target.style.transform = 'scale(1)'
+              (e.target as HTMLElement).style.background = 'transparent'
+              (e.target as HTMLElement).style.color = '#d4af37'
+              (e.target as HTMLElement).style.textShadow = '0 2px 4px rgba(0, 0, 0, 0.4)'
+              (e.target as HTMLElement).style.transform = 'scale(1)'
             }}
           >
             Mantenimientos
@@ -317,10 +317,10 @@ const Hero = () => {
             fontFamily: 'Inter, sans-serif'
           }}
           onMouseOver={(e) => {
-            e.target.style.transform = 'translateY(-3px)'
+            (e.target as HTMLElement).style.transform = 'translateY(-3px)'
           }}
           onMouseOut={(e) => {
-            e.target.style.transform = 'translateY(0)'
+            (e.target as HTMLElement).style.transform = 'translateY(0)'
           }}
         >
           <div style={{
