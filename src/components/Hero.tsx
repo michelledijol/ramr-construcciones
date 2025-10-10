@@ -261,22 +261,6 @@ const Hero = () => {
             Solicitar Presupuesto
           </Button>
           
-          {/* Información de contacto */}
-          <div style={{
-            marginTop: '1rem',
-            textAlign: 'center',
-            color: '#e2e8f0',
-            fontSize: 'clamp(0.8rem, 2vw, 0.85rem)',
-            fontFamily: 'Inter, sans-serif',
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)'
-          }}>
-            <p style={{ margin: '0.25rem 0' }}>
-              📱 WhatsApp: 1-829-717-7552
-            </p>
-            <p style={{ margin: '0.25rem 0' }}>
-              👤 Roberto Martínez - RAMR Construcciones SRL
-            </p>
-          </div>
           
           {/* Microclaim de credibilidad */}
           <div style={{
