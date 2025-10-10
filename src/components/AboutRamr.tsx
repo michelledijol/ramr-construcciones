@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 // Componente AboutRamr - Descripción de la empresa Ramr
 // Este componente muestra la historia y propósito de la empresa de construcción
@@ -190,22 +190,22 @@ const AboutRamr = () => {
                 cursor: 'pointer'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-3px)'
-                e.target.style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(-3px)'
+                (e.target as HTMLElement).style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Animar el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(5deg) scale(1.1)'
                   icon.style.filter = 'brightness(1.2)'
                 }
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(0)'
+                (e.target as HTMLElement).style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Resetear el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(0deg) scale(1)'
                   icon.style.filter = 'brightness(1)'
@@ -266,22 +266,22 @@ const AboutRamr = () => {
                 cursor: 'pointer'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-3px)'
-                e.target.style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(-3px)'
+                (e.target as HTMLElement).style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Animar el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(5deg) scale(1.1)'
                   icon.style.filter = 'brightness(1.2)'
                 }
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(0)'
+                (e.target as HTMLElement).style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Resetear el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(0deg) scale(1)'
                   icon.style.filter = 'brightness(1)'
@@ -342,22 +342,22 @@ const AboutRamr = () => {
                 cursor: 'pointer'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-3px)'
-                e.target.style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(-3px)'
+                (e.target as HTMLElement).style.boxShadow = '0 8px 25px rgba(205, 163, 73, 0.15)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Animar el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(5deg) scale(1.1)'
                   icon.style.filter = 'brightness(1.2)'
                 }
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
-                e.target.style.background = '#FFFCF9'
+                (e.target as HTMLElement).style.transform = 'translateY(0)'
+                (e.target as HTMLElement).style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)'
+                (e.target as HTMLElement).style.background = '#FFFCF9'
                 // Resetear el ícono
-                const icon = e.target.querySelector('.feature-icon')
+                const icon = (e.target as HTMLElement).querySelector('.feature-icon')
                 if (icon) {
                   icon.style.transform = 'rotate(0deg) scale(1)'
                   icon.style.filter = 'brightness(1)'
@@ -469,14 +469,14 @@ const AboutRamr = () => {
                 boxShadow: '0 4px 8px rgba(192, 150, 0, 0.15)'
               }}
               onMouseOver={(e) => {
-                e.target.style.background = 'linear-gradient(90deg, #D4AF37, #E2C675)'
-                e.target.style.transform = 'translateY(-2px)'
-                e.target.style.boxShadow = '0 6px 20px rgba(192, 150, 0, 0.25)'
+                (e.target as HTMLElement).style.background = 'linear-gradient(90deg, #D4AF37, #E2C675)'
+                (e.target as HTMLElement).style.transform = 'translateY(-2px)'
+                (e.target as HTMLElement).style.boxShadow = '0 6px 20px rgba(192, 150, 0, 0.25)'
               }}
               onMouseOut={(e) => {
-                e.target.style.background = '#CDA349'
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 8px rgba(192, 150, 0, 0.15)'
+                (e.target as HTMLElement).style.background = '#CDA349'
+                (e.target as HTMLElement).style.transform = 'translateY(0)'
+                (e.target as HTMLElement).style.boxShadow = '0 4px 8px rgba(192, 150, 0, 0.15)'
               }}
             >
               Ver Servicios

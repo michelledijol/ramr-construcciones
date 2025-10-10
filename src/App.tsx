@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react' // No necesario en React 17+
 import Hero from './components/Hero'
 import AboutRamr from './components/AboutRamr'
 import InfoBlock from './components/InfoBlock'
@@ -156,12 +156,12 @@ function App() {
                     borderBottom: '1px solid transparent'
                   }}
                   onMouseOver={(e) => {
-                    e.target.style.color = '#B8860B'
-                    e.target.style.borderBottom = '1px solid #B8860B'
+                    (e.target as HTMLAnchorElement).style.color = '#B8860B'
+                    (e.target as HTMLAnchorElement).style.borderBottom = '1px solid #B8860B'
                   }}
                   onMouseOut={(e) => {
-                    e.target.style.color = '#CDA349'
-                    e.target.style.borderBottom = '1px solid transparent'
+                    (e.target as HTMLAnchorElement).style.color = '#CDA349'
+                    (e.target as HTMLAnchorElement).style.borderBottom = '1px solid transparent'
                   }}
                 >ramrconstrucciones.srl@gmail.com</a>
               </p>
@@ -178,12 +178,12 @@ function App() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   onMouseOver={(e) => {
-                    e.target.style.color = '#B8860B'
-                    e.target.style.borderBottom = '1px solid #B8860B'
+                    (e.target as HTMLAnchorElement).style.color = '#B8860B'
+                    (e.target as HTMLAnchorElement).style.borderBottom = '1px solid #B8860B'
                   }}
                   onMouseOut={(e) => {
-                    e.target.style.color = '#CDA349'
-                    e.target.style.borderBottom = '1px solid transparent'
+                    (e.target as HTMLAnchorElement).style.color = '#CDA349'
+                    (e.target as HTMLAnchorElement).style.borderBottom = '1px solid transparent'
                   }}
                 >1-829-717-7552</a>
               </p>

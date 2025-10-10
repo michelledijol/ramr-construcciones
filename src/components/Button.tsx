@@ -12,6 +12,8 @@ interface ButtonProps {
   'aria-label'?: string;
   'data-cta'?: string;
   type?: 'button' | 'submit' | 'reset';
+  target?: string;
+  rel?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,7 +27,9 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   'aria-label': ariaLabel,
   'data-cta': dataCta,
-  type = 'button'
+  type = 'button',
+  target,
+  rel
 }) => {
   const baseClasses = `btn btn--${variant}`;
   const sizeClasses = {
@@ -74,7 +78,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} {...commonProps}>
+      <a href={href} target={target} rel={rel} {...commonProps}>
         {content}
       </a>
     );
