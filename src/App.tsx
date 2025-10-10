@@ -135,6 +135,62 @@ function App() {
             >
               Iniciar Mi Proyecto
             </Button>
+            
+            {/* Información de contacto */}
+            <div style={{
+              marginTop: '1.5rem',
+              textAlign: 'center',
+              color: '#6b7280',
+              fontSize: '1rem',
+              fontFamily: 'Inter, sans-serif',
+              lineHeight: '1.6'
+            }}>
+              <p style={{ margin: '0.5rem 0', fontWeight: '500' }}>
+                📧 Email: <a 
+                  href="mailto:ramrconstrucciones.srl@gmail.com" 
+                  style={{ 
+                    color: '#CDA349', 
+                    textDecoration: 'none', 
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease',
+                    borderBottom: '1px solid transparent'
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.color = '#B8860B'
+                    e.target.style.borderBottom = '1px solid #B8860B'
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.color = '#CDA349'
+                    e.target.style.borderBottom = '1px solid transparent'
+                  }}
+                >ramrconstrucciones.srl@gmail.com</a>
+              </p>
+              <p style={{ margin: '0.5rem 0', fontWeight: '500' }}>
+                📱 WhatsApp: <a 
+                  href="https://wa.me/18297177552" 
+                  style={{ 
+                    color: '#CDA349', 
+                    textDecoration: 'none', 
+                    fontWeight: '600',
+                    transition: 'all 0.3s ease',
+                    borderBottom: '1px solid transparent'
+                  }} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onMouseOver={(e) => {
+                    e.target.style.color = '#B8860B'
+                    e.target.style.borderBottom = '1px solid #B8860B'
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.color = '#CDA349'
+                    e.target.style.borderBottom = '1px solid transparent'
+                  }}
+                >1-829-717-7552</a>
+              </p>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', color: '#9ca3af' }}>
+                👤 Roberto Martínez - RAMR Construcciones SRL
+              </p>
+            </div>
           </div>
         </div>
       </section>
