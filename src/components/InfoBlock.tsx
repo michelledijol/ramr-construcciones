@@ -107,7 +107,15 @@ const InfoBlock = () => {
                   justifyContent: 'center',
                   gap: '0.5rem'
                 }}>
-                  <AiFillStar style={{ color: 'white', width: '1rem', height: '1rem' }} />
+                  <AiFillStar style={{ 
+                    color: 'white', 
+                    width: '1rem', 
+                    height: '1rem',
+                    minWidth: '1rem',
+                    minHeight: '1rem',
+                    maxWidth: '1rem',
+                    maxHeight: '1rem'
+                  }} />
                   20 años de experiencia
                 </div>
               </div>
@@ -148,7 +156,15 @@ const InfoBlock = () => {
                     display: 'flex',
                     justifyContent: 'center'
                   }}>
-                    <MdAccessTime style={{ width: isMobile ? '2rem' : '2.5rem', height: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
+                    <MdAccessTime style={{ 
+                      width: isMobile ? '2rem' : '2.5rem', 
+                      height: isMobile ? '2rem' : '2.5rem', 
+                      minWidth: isMobile ? '2rem' : '2.5rem',
+                      minHeight: isMobile ? '2rem' : '2.5rem',
+                      maxWidth: isMobile ? '2rem' : '2.5rem',
+                      maxHeight: isMobile ? '2rem' : '2.5rem',
+                      color: '#d4af37' 
+                    }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{
@@ -204,7 +220,15 @@ const InfoBlock = () => {
                     display: 'flex',
                     justifyContent: 'center'
                   }}>
-                    <MdApartment style={{ width: isMobile ? '2rem' : '2.5rem', height: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
+                    <MdApartment style={{ 
+                      width: isMobile ? '2rem' : '2.5rem', 
+                      height: isMobile ? '2rem' : '2.5rem', 
+                      minWidth: isMobile ? '2rem' : '2.5rem',
+                      minHeight: isMobile ? '2rem' : '2.5rem',
+                      maxWidth: isMobile ? '2rem' : '2.5rem',
+                      maxHeight: isMobile ? '2rem' : '2.5rem',
+                      color: '#d4af37' 
+                    }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{
@@ -260,7 +284,15 @@ const InfoBlock = () => {
                     display: 'flex',
                     justifyContent: 'center'
                   }}>
-                    <IoCheckmarkCircle style={{ width: isMobile ? '2rem' : '2.5rem', height: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
+                    <IoCheckmarkCircle style={{ 
+                      width: isMobile ? '2rem' : '2.5rem', 
+                      height: isMobile ? '2rem' : '2.5rem', 
+                      minWidth: isMobile ? '2rem' : '2.5rem',
+                      minHeight: isMobile ? '2rem' : '2.5rem',
+                      maxWidth: isMobile ? '2rem' : '2.5rem',
+                      maxHeight: isMobile ? '2rem' : '2.5rem',
+                      color: '#d4af37' 
+                    }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{

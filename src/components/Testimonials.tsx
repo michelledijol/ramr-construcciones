@@ -111,28 +111,12 @@ const Testimonials = () => {
         </div>
 
         {/* Grid de testimonios */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem',
-          padding: '2rem 0',
-          maxWidth: '100%',
-          overflowX: 'auto'
-        }}>
+        <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
+              className="testimonial-card"
               style={{
-                background: '#ffffff',
-                padding: 'clamp(1.5rem, 4vw, 3rem) 2rem',
-                borderRadius: '18px',
-                boxShadow: '0 6px 18px rgba(0, 0, 0, 0.04)',
-                border: '1px solid rgba(212, 175, 55, 0.15)',
-                position: 'relative',
-                transition: 'all 0.3s ease',
-                maxWidth: '100%',
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.98)',
                 animationDelay: `${index * 0.1}s`
               }}
               onMouseOver={(e) => {

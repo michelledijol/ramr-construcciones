@@ -113,6 +113,10 @@ const Hero = () => {
           <MdConstruction style={{ 
             width: 'clamp(1.2rem, 3vw, 1.5rem)', 
             height: 'clamp(1.2rem, 3vw, 1.5rem)',
+            minWidth: 'clamp(1.2rem, 3vw, 1.5rem)',
+            minHeight: 'clamp(1.2rem, 3vw, 1.5rem)',
+            maxWidth: 'clamp(1.2rem, 3vw, 1.5rem)',
+            maxHeight: 'clamp(1.2rem, 3vw, 1.5rem)',
             color: '#d4af37' 
           }} />
           <span>Obras civiles, residenciales e industriales — entregadas a tiempo, siempre con garantía.</span>
@@ -287,7 +291,11 @@ const Hero = () => {
             <AiFillStar style={{ 
               color: '#d4af37', 
               width: 'clamp(1rem, 2.5vw, 1.1rem)',
-              height: 'clamp(1rem, 2.5vw, 1.1rem)'
+              height: 'clamp(1rem, 2.5vw, 1.1rem)',
+              minWidth: 'clamp(1rem, 2.5vw, 1.1rem)',
+              minHeight: 'clamp(1rem, 2.5vw, 1.1rem)',
+              maxWidth: 'clamp(1rem, 2.5vw, 1.1rem)',
+              maxHeight: 'clamp(1rem, 2.5vw, 1.1rem)'
             }} />
             <span>+200 proyectos residenciales y civiles entregados con éxito en 20 años de experiencia</span>
           </div>
