@@ -139,7 +139,7 @@ const Services = () => {
                 background: 'white',
                 borderRadius: '8px',
                 padding: 'clamp(1.5rem, 4vw, 2.5rem)',
-                minHeight: 'clamp(400px, 50vh, 480px)',
+                height: 'auto',
                 boxShadow: '0 6px 20px rgba(0,0,0,.06)',
                 transition: 'all 0.3s ease',
                 border: '1px solid rgba(212,175,55,0.3)',
@@ -217,7 +217,7 @@ const Services = () => {
               <ul style={{ 
                 listStyle: 'none', 
                 marginBottom: '2rem',
-                flex: '1'
+                flex: '0 1 auto'
               }}>
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} style={{ 
