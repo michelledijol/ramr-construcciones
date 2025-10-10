@@ -127,7 +127,9 @@ const Services = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
           gap: 'clamp(1.5rem, 4vw, 3rem)',
           justifyContent: 'center',
-          marginBottom: '4rem'
+          marginBottom: '4rem',
+          maxWidth: '100%',
+          overflowX: 'auto'
         }}>
           {services.map((service, index) => (
             <div 
@@ -143,7 +145,8 @@ const Services = () => {
                 border: '1px solid rgba(212,175,55,0.3)',
                 position: 'relative',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                maxWidth: '100%'
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)'
