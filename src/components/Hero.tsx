@@ -10,13 +10,12 @@ const Hero = () => {
 
   return (
     <section className={`hero fade-slide-in ${isLoaded ? 'loaded' : ''}`} style={{ 
-      minHeight: '70vh',
+      minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
       position: 'relative',
       background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%)',
-      overflow: 'hidden',
-      aspectRatio: '16/9'
+      overflow: 'hidden'
     }}>
       {/* Imagen de fondo - Casa moderna similar a proyectos RAMR */}
       <div className="hero-image" style={{
@@ -59,7 +58,7 @@ const Hero = () => {
         <div style={{
           maxWidth: '1000px',
           margin: '0 auto',
-          padding: '6rem 2rem',
+          padding: '2rem 1rem',
           position: 'relative',
           zIndex: 3,
           width: '100%',
@@ -67,7 +66,7 @@ const Hero = () => {
         }}>
         
         {/* H1 - Claim principal enfocado en hogares con mejor espaciado */}
-        <div style={{ marginBottom: '5rem', marginTop: '4rem' }}>
+        <div style={{ marginBottom: '2rem', marginTop: '1rem' }}>
           <div className="hero-title" style={{
             fontWeight: '700',
             color: 'white',
@@ -76,7 +75,8 @@ const Hero = () => {
             textShadow: '0 4px 8px rgba(0, 0, 0, 0.5)',
             letterSpacing: '1px',
             lineHeight: '1.1',
-            padding: '0 1rem'
+            padding: '0 1rem',
+            fontSize: 'clamp(1.5rem, 4vw, 3rem)'
           }}>
             <div>20 años construyendo hogares</div>
             <div>con garantía y solidez</div>
@@ -104,9 +104,10 @@ const Hero = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '0.5rem'
+          gap: '0.5rem',
+          fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)'
         }}>
-          <span style={{ fontSize: '1.5rem' }}>🏗️</span>
+          <span style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>🏗️</span>
           <span>Obras civiles, residenciales e industriales — entregadas a tiempo, siempre con garantía.</span>
         </div>
         
@@ -115,17 +116,17 @@ const Hero = () => {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          gap: '1rem',
-          marginBottom: '3rem',
+          gap: '0.5rem',
+          marginBottom: '2rem',
           maxWidth: '800px',
-          margin: '0 auto 3rem auto'
+          margin: '0 auto 2rem auto'
         }}>
           <div style={{
             background: '#d4af37',
             color: '#1a1a1a',
-            padding: '0.5rem 1rem',
+            padding: '0.4rem 0.8rem',
             borderRadius: '20px',
-            fontSize: '0.9rem',
+            fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
             fontWeight: '700',
             border: '2px solid #d4af37',
             textShadow: 'none',
@@ -139,9 +140,9 @@ const Hero = () => {
             style={{
               background: 'transparent',
               color: '#d4af37',
-              padding: '0.5rem 1rem',
+              padding: '0.4rem 0.8rem',
               borderRadius: '20px',
-              fontSize: '0.9rem',
+              fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
               fontWeight: '600',
               border: '2px solid #d4af37',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
@@ -168,9 +169,9 @@ const Hero = () => {
             style={{
               background: 'transparent',
               color: '#d4af37',
-              padding: '0.5rem 1rem',
+              padding: '0.4rem 0.8rem',
               borderRadius: '20px',
-              fontSize: '0.9rem',
+              fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
               fontWeight: '600',
               border: '2px solid #d4af37',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
@@ -195,9 +196,9 @@ const Hero = () => {
             style={{
               background: 'transparent',
               color: '#d4af37',
-              padding: '0.5rem 1rem',
+              padding: '0.4rem 0.8rem',
               borderRadius: '20px',
-              fontSize: '0.9rem',
+              fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
               fontWeight: '600',
               border: '2px solid #d4af37',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
@@ -222,9 +223,9 @@ const Hero = () => {
             style={{
               background: 'transparent',
               color: '#d4af37',
-              padding: '0.5rem 1rem',
+              padding: '0.4rem 0.8rem',
               borderRadius: '20px',
-              fontSize: '0.9rem',
+              fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
               fontWeight: '600',
               border: '2px solid #d4af37',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
@@ -265,7 +266,7 @@ const Hero = () => {
             marginTop: '1rem',
             textAlign: 'center',
             color: '#e2e8f0',
-            fontSize: '0.85rem',
+            fontSize: 'clamp(0.8rem, 2vw, 0.85rem)',
             fontFamily: 'Inter, sans-serif',
             textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)'
           }}>
@@ -285,12 +286,14 @@ const Hero = () => {
             justifyContent: 'center',
             gap: '0.5rem',
             color: '#e2e8f0',
-            fontSize: '0.9rem',
+            fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
             fontWeight: '500',
             fontFamily: 'Inter, sans-serif',
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)'
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
+            textAlign: 'center',
+            padding: '0 1rem'
           }}>
-            <span style={{ color: '#d4af37', fontSize: '1.1rem' }}>⭐</span>
+            <span style={{ color: '#d4af37', fontSize: 'clamp(1rem, 2.5vw, 1.1rem)' }}>⭐</span>
             <span>+200 proyectos residenciales y civiles entregados con éxito en 20 años de experiencia</span>
           </div>
         </div>
