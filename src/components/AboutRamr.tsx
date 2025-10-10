@@ -231,7 +231,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                <MdConstruction style={{ color: 'white', fontSize: '1.5rem' }} />
+                <MdConstruction style={{ color: 'white', width: '1.5rem', height: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{
@@ -307,7 +307,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                <AiFillStar style={{ color: 'white', fontSize: '1.5rem' }} />
+                <AiFillStar style={{ color: 'white', width: '1.5rem', height: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{
@@ -383,7 +383,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                <IoHome style={{ color: 'white', fontSize: '1.5rem' }} />
+                <IoHome style={{ color: 'white', width: '1.5rem', height: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{

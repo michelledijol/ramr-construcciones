@@ -31,7 +31,7 @@ const Services = () => {
       id: 1,
       title: "Construcción Residencial",
       description: "Hogares de alto estándar con planificación 3D, control de calidad y garantía por escrito.",
-      icon: <IoHome style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
+      icon: <IoHome style={{ color: '#CDA349', width: '2.5rem', height: '2.5rem' }} />,
       features: [
         "Diseño 3D para decidir antes de construir",
         "Materiales certificados", 
@@ -43,7 +43,7 @@ const Services = () => {
       id: 2,
       title: "Desarrollo Comercial",
       description: "Espacios que maximizan rentabilidad y operatividad desde el día uno.",
-      icon: <MdApartment style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
+      icon: <MdApartment style={{ color: '#CDA349', width: '2.5rem', height: '2.5rem' }} />,
       features: [
         "Ubicación y normativas",
         "Rentabilidad prevista y plazos claros", 
@@ -55,7 +55,7 @@ const Services = () => {
       id: 3,
       title: "Reformas Premium",
       description: "Transformaciones precisas, sin sorpresas y con cronograma firme.",
-      icon: <FaHammer style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
+      icon: <FaHammer style={{ color: '#CDA349', width: '2.5rem', height: '2.5rem' }} />,
       features: [
         "Auditoría estructural",
         "Presupuesto detallado", 
@@ -67,7 +67,7 @@ const Services = () => {
       id: 4,
       title: "Consultoría Inmobiliaria",
       description: "Decisiones de inversión con datos, riesgos y plazos claros.",
-      icon: <IoStatsChart style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
+      icon: <IoStatsChart style={{ color: '#CDA349', width: '2.5rem', height: '2.5rem' }} />,
       features: [
         "Análisis de mercado",
         "Evaluación técnica previa", 

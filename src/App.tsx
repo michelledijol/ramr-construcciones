@@ -150,7 +150,7 @@ function App() {
               lineHeight: '1.6'
             }}>
               <p style={{ margin: '0.5rem 0', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <MdEmail style={{ color: '#CDA349', fontSize: '1.2rem' }} />
+                <MdEmail style={{ color: '#CDA349', width: '1.2rem', height: '1.2rem' }} />
                 Email: <a 
                   href="mailto:ramrconstrucciones.srl@gmail.com" 
                   style={{ 
@@ -171,7 +171,7 @@ function App() {
                 >ramrconstrucciones.srl@gmail.com</a>
               </p>
               <p style={{ margin: '0.5rem 0', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <IoLogoWhatsapp style={{ color: '#25D366', fontSize: '1.2rem' }} />
+                <IoLogoWhatsapp style={{ color: '#25D366', width: '1.2rem', height: '1.2rem' }} />
                 WhatsApp: <a 
                   href="https://wa.me/18297177552" 
                   style={{ 
@@ -194,7 +194,7 @@ function App() {
                 >1-829-717-7552</a>
               </p>
               <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', color: '#9ca3af', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <FaUserCircle style={{ color: '#CDA349', fontSize: '1rem' }} />
+                <FaUserCircle style={{ color: '#CDA349', width: '1rem', height: '1rem' }} />
                 Roberto Martínez - RAMR Construcciones SRL
               </p>
             </div>
