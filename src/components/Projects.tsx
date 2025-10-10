@@ -39,6 +39,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Galería de Villas Modernas",
+      category: "residencial",
+      image: "/villafoto1.png",
+      description: "Colección de villas residenciales con diseño contemporáneo, materiales premium y acabados de primera calidad.",
+      features: ["5 Villas Únicas", "Diseño Contemporáneo", "Materiales Premium", "Acabados de Lujo"],
+      price: "Proyectos Completados",
+      status: "Completado",
+      gallery: [
+        "/villafoto1.png",
+        "/villafoto2.png", 
+        "/villafoto3.png",
+        "/villafoto4.png",
+        "/villafoto5.png"
+      ]
+    },
+    {
+      id: 2,
       title: "Edificio Residencial #35",
       category: "residencial",
       image: "/images/edificio-35.jpg.png",
@@ -48,7 +65,7 @@ const Projects = () => {
       status: "Completado"
     },
     {
-      id: 2,
+      id: 3,
       title: "Villa con Piscina y Amenities",
       category: "residencial",
       image: "/images/villa-piscina.jpg.png",
@@ -58,7 +75,7 @@ const Projects = () => {
       status: "Completado"
     },
     {
-      id: 3,
+      id: 4,
       title: "Casa Moderna #148",
       category: "residencial",
       image: "/images/casa-148.jpg.png",
@@ -68,7 +85,7 @@ const Projects = () => {
       status: "Completado"
     },
     {
-      id: 4,
+      id: 5,
       title: "Casa Contemporánea #146",
       category: "residencial",
       image: "/images/casa-146.jpg.png",
@@ -78,7 +95,7 @@ const Projects = () => {
       status: "Completado"
     },
     {
-      id: 5,
+      id: 6,
       title: "Villa Residencial #186",
       category: "residencial",
       image: "/images/villa-186.jpg.png",
@@ -86,24 +103,12 @@ const Projects = () => {
       features: ["Escalera Flotante", "Iluminación LED", "Materiales Contrastantes", "Diseño Contemporáneo"],
       price: "Proyecto Completado",
       status: "Completado"
-    },
-    {
-      id: 6,
-      title: "Villa Premium con Piscina",
-      category: "residencial",
-      image: "/images/villa-piscina.jpg.png",
-      description: "Casa de dos pisos con diseño moderno, materiales contrastantes, grandes ventanales y paisajismo exuberante.",
-      features: ["2 Pisos", "Ventanales Amplios", "Paisajismo", "Diseño Moderno"],
-      price: "Proyecto Completado",
-      status: "Completado"
     }
   ]
 
   const filters = [
     { key: 'todos', label: 'Todos los Proyectos' },
-    { key: 'residencial', label: 'Residencial' },
-    { key: 'comercial', label: 'Comercial' },
-    { key: 'remodelacion', label: 'Remodelación' }
+    { key: 'residencial', label: 'Residencial' }
   ]
 
   const filteredProjects = activeFilter === 'todos' 
@@ -111,10 +116,12 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section id="proyectos" className="section" style={{ backgroundColor: '#ffffff' }}>
+    <section id="proyectos" className="section" style={{ 
+      background: 'radial-gradient(circle at top, #FFFDF8 0%, #FFFFFF 80%)'
+    }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
         {/* Título de sección clásico */}
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <div style={{
             display: 'inline-block',
             background: 'rgba(212, 175, 55, 0.1)',
@@ -142,10 +149,10 @@ const Projects = () => {
             Nuestros Proyectos
           </div>
           <h2 className="section-title" style={{ fontSize: '3rem', marginBottom: '1.5rem', color: '#1a1a1a', fontFamily: 'Playfair Display, serif' }}>
-            Portfolio de proyectos arquitectónicos que definen el futuro de la construcción
+            Proyectos que definen nuestro sello arquitectónico
           </h2>
           <p className="section-subtitle" style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', color: '#4a5568', lineHeight: '1.7' }}>
-            Descubre nuestra trayectoria de excelencia a través de proyectos que han transformado el paisaje urbano
+            Explora los proyectos que transforman espacios y reflejan nuestra pasión por el detalle
           </p>
         </div>
 
@@ -155,7 +162,7 @@ const Projects = () => {
           flexWrap: 'wrap', 
           justifyContent: 'center', 
           gap: '1.5rem', 
-          marginBottom: '4rem' 
+          marginBottom: '5rem' 
         }}>
           {filters.map((filter) => (
             <button
@@ -163,36 +170,40 @@ const Projects = () => {
               onClick={() => handleFilterChange(filter.key)}
               style={{
                 padding: '0.8rem 1.5rem',
-                borderRadius: '4px',
-                fontWeight: '600',
+                borderRadius: '6px',
+                fontWeight: '500',
                 fontSize: '0.85rem',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 background: activeFilter === filter.key 
-                  ? '#d4af37' 
+                  ? 'linear-gradient(90deg, #D4AF37, #E2C675)' 
                   : 'transparent',
-                color: activeFilter === filter.key ? '#1a1a1a' : '#4a5568',
+                color: activeFilter === filter.key ? '#ffffff' : '#333333',
                 boxShadow: activeFilter === filter.key 
-                  ? '0 4px 15px rgba(212, 175, 55, 0.3)' 
+                  ? '0 0 0 2px rgba(212,175,55,0.3)' 
                   : 'none',
-                border: '2px solid #d4af37',
+                border: '1px solid rgba(212,175,55,0.6)',
                 textTransform: 'uppercase',
-                letterSpacing: '1px'
+                letterSpacing: '0.3px'
               }}
               onMouseOver={(e) => {
                 if (activeFilter !== filter.key) {
                   e.target.style.background = '#d4af37'
                   e.target.style.color = '#1a1a1a'
                   e.target.style.transform = 'translateY(-2px)'
-                  e.target.style.boxShadow = '0 6px 20px rgba(212, 175, 55, 0.3)'
+                  e.target.style.boxShadow = '0 4px 10px rgba(212,175,55,0.25)'
+                } else {
+                  e.target.style.transform = 'translateY(-2px)'
                 }
               }}
               onMouseOut={(e) => {
                 if (activeFilter !== filter.key) {
                   e.target.style.background = 'transparent'
-                  e.target.style.color = '#4a5568'
+                  e.target.style.color = '#333333'
                   e.target.style.transform = 'translateY(0)'
                   e.target.style.boxShadow = 'none'
+                } else {
+                  e.target.style.transform = 'translateY(0)'
                 }
               }}
             >
@@ -210,24 +221,24 @@ const Projects = () => {
               key={project.id}
               className={`card-hover ${isAnimating ? 'filter-active' : ''}`}
               style={{
-                background: '#FAFAFA',
-                borderRadius: '8px',
+                background: '#ffffff',
+                borderRadius: '10px',
                 overflow: 'hidden',
-                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.08)',
-                transition: 'all 0.3s ease',
-                border: '1px solid #e2e8f0',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.03)',
+                transition: 'all 0.4s ease',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
                 position: 'relative'
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px)'
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.1)'
-                e.currentTarget.style.borderColor = '#d4af37'
-                e.currentTarget.style.borderWidth = '2px'
+                e.currentTarget.style.transform = 'translateY(-5px)'
+                e.currentTarget.style.boxShadow = '0 8px 22px rgba(0,0,0,0.08)'
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)'
+                e.currentTarget.style.borderWidth = '1px'
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)'
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.08)'
-                e.currentTarget.style.borderColor = '#e2e8f0'
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.03)'
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)'
                 e.currentTarget.style.borderWidth = '1px'
               }}
             >
@@ -236,25 +247,75 @@ const Projects = () => {
                 style={{ position: 'relative', overflow: 'hidden', cursor: 'pointer' }}
                 onClick={() => openLightbox(index)}
               >
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  style={{
-                    width: '100%',
+                {project.gallery ? (
+                  // Galería de múltiples imágenes
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '1fr 1fr',
                     height: '250px',
-                    objectFit: 'cover',
-                    transition: 'transform 0.5s ease',
-                    filter: 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.transform = 'scale(1.1)'
-                    e.target.style.filter = 'brightness(1) contrast(1.1) saturate(1.2) sepia(0.05)'
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.transform = 'scale(1)'
-                    e.target.style.filter = 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
-                  }}
-                />
+                    gap: '2px'
+                  }}>
+                    {project.gallery.slice(0, 4).map((img, imgIndex) => (
+                      <img 
+                        key={imgIndex}
+                        src={img} 
+                        alt={`${project.title} ${imgIndex + 1}`}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          transition: 'transform 0.3s ease',
+                          filter: 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
+                        }}
+                        onMouseOver={(e) => {
+                          e.target.style.transform = 'scale(1.03)'
+                          e.target.style.filter = 'brightness(1) contrast(1.1) saturate(1.2) sepia(0.05)'
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.transform = 'scale(1)'
+                          e.target.style.filter = 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
+                        }}
+                      />
+                    ))}
+                    {project.gallery.length > 4 && (
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '8px',
+                        right: '8px',
+                        background: 'rgba(0, 0, 0, 0.7)',
+                        color: 'white',
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        fontSize: '0.8rem',
+                        fontWeight: '600'
+                      }}>
+                        +{project.gallery.length - 4} más
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  // Imagen única
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      transition: 'transform 0.5s ease',
+                      filter: 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.transform = 'scale(1.03)'
+                      e.target.style.filter = 'brightness(1) contrast(1.1) saturate(1.2) sepia(0.05)'
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.transform = 'scale(1)'
+                      e.target.style.filter = 'brightness(0.95) contrast(1.05) saturate(1.1) sepia(0.1)'
+                    }}
+                  />
+                )}
                 
                 {/* Overlay sutil para cohesión visual */}
                 <div style={{
@@ -274,15 +335,15 @@ const Projects = () => {
                   right: '1rem'
                 }}>
                   <div style={{
-                    background: '#1a1a1a',
-                    color: '#C5A349',
-                    padding: '0.4rem 0.8rem',
+                    background: 'linear-gradient(90deg, #C9A33A, #E2C675)',
+                    color: '#ffffff',
+                    padding: '6px 10px',
                     borderRadius: '4px',
-                    fontSize: '0.7rem',
-                    fontWeight: '700',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    boxShadow: '0 2px 8px rgba(212,175,55,0.3)',
                     textTransform: 'uppercase',
-                    letterSpacing: '1px'
+                    letterSpacing: '0.5px'
                   }}>
                     COMPLETADO
                   </div>
@@ -292,13 +353,25 @@ const Projects = () => {
               {/* Contenido del proyecto */}
               <div style={{ padding: '2.5rem 2rem' }}>
                 {/* Título */}
-                <h3 style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '700', 
-                  color: '#1a1a1a', 
-                  marginBottom: '1rem',
-                  lineHeight: '1.3'
-                }}>
+                <h3 
+                  className="project-title"
+                  style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: '700', 
+                    color: '#111111', 
+                    marginTop: '1rem',
+                    marginBottom: '1rem',
+                    lineHeight: '1.3',
+                    transition: 'color 0.3s ease',
+                    cursor: 'pointer'
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.color = '#C9A33A'
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.color = '#111111'
+                  }}
+                >
                   {project.title.split('#').map((part, index) => 
                     index === 0 ? part : (
                       <span key={index}>
@@ -310,10 +383,10 @@ const Projects = () => {
                 
                 {/* Descripción */}
                 <p style={{ 
-                  color: '#333333', 
+                  color: '#555555', 
                   marginBottom: '2rem', 
                   lineHeight: '1.6',
-                  fontSize: '0.95rem'
+                  fontSize: '15px'
                 }}>
                   {project.description}
                 </p>
@@ -322,30 +395,33 @@ const Projects = () => {
                 <div style={{ 
                   display: 'flex', 
                   flexWrap: 'wrap', 
-                  gap: '0.5rem', 
+                  gap: '8px', 
+                  marginTop: '12px',
                   marginBottom: '2.5rem' 
                 }}>
                   {project.features.map((feature, featureIndex) => (
                     <span 
                       key={featureIndex}
                       style={{
-                        background: 'transparent',
-                        color: '#4a5568',
-                        padding: '0.4rem 0.6rem',
-                        borderRadius: '22px',
-                        fontSize: '0.9rem',
+                        background: '#ffffff',
+                        color: '#333333',
+                        padding: '6px 12px',
+                        borderRadius: '20px',
+                        fontSize: '14px',
                         fontWeight: '600',
-                        border: '1px solid #d4af37',
+                        border: '1px solid rgba(212,175,55,0.4)',
                         cursor: 'pointer',
                         transition: 'all 0.3s ease'
                       }}
                       onMouseOver={(e) => {
-                        e.target.style.background = '#d4af37'
-                        e.target.style.color = '#1a1a1a'
+                        e.target.style.background = 'linear-gradient(90deg, #D4AF37, #E2C675)'
+                        e.target.style.color = '#ffffff'
+                        e.target.style.boxShadow = '0 4px 8px rgba(212,175,55,0.25)'
                       }}
                       onMouseOut={(e) => {
-                        e.target.style.background = 'transparent'
-                        e.target.style.color = '#4a5568'
+                        e.target.style.background = '#ffffff'
+                        e.target.style.color = '#333333'
+                        e.target.style.boxShadow = 'none'
                       }}
                     >
                       {feature}
@@ -358,96 +434,25 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* CTA Final Elegante */}
+        
+        {/* Cierre narrativo final */}
         <div style={{
           textAlign: 'center',
-          background: 'linear-gradient(180deg, #fff 0%, #fdf9f1 100%)',
-          padding: '6rem 0',
-          borderTop: '1px solid #CDA349',
-          borderBottom: '1px solid #CDA349',
-          position: 'relative',
-          overflow: 'hidden'
+          padding: '3rem 0',
+          marginTop: '2rem'
         }}>
-          {/* Textura sutil */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            backgroundImage: `
-              linear-gradient(90deg, transparent 98%, rgba(205, 163, 73, 0.03) 100%),
-              linear-gradient(0deg, transparent 98%, rgba(205, 163, 73, 0.03) 100%)
-            `,
-            backgroundSize: '20px 20px',
-            pointerEvents: 'none'
-          }}></div>
-          
-          <div style={{ 
-            maxWidth: '800px', 
-            margin: '0 auto', 
-            textAlign: 'center', 
-            padding: '0 2rem',
-            position: 'relative',
-            zIndex: '1'
+          <p style={{
+            fontSize: '1.1rem',
+            color: '#5A5A5A',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: '400',
+            fontStyle: 'italic',
+            maxWidth: '600px',
+            margin: '0 auto',
+            lineHeight: '1.6'
           }}>
-            <h3 style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
-              fontWeight: '700',
-              color: '#1a1a1a',
-              marginBottom: '1.5rem',
-              fontFamily: 'Playfair Display, serif'
-            }}>
-              Convertimos su idea en un espacio que perdura
-            </h3>
-            <p style={{
-              fontSize: '1.2rem',
-              color: '#4a5568',
-              marginBottom: '3rem',
-              lineHeight: '1.6',
-              fontFamily: 'Inter, sans-serif'
-            }}>
-              Su próximo proyecto comienza aquí. Hablemos de construir su visión.
-            </p>
-            
-            {/* Líneas doradas */}
-            <div style={{
-              position: 'relative',
-              margin: '2rem 0'
-            }}>
-              <div style={{
-                position: 'absolute',
-                left: '50%',
-                top: '-1rem',
-                transform: 'translateX(-50%)',
-                width: '60px',
-                height: '1px',
-                background: '#CDA349',
-                opacity: '0.6'
-              }}></div>
-              <div style={{
-                position: 'absolute',
-                left: '50%',
-                bottom: '-1rem',
-                transform: 'translateX(-50%)',
-                width: '60px',
-                height: '1px',
-                background: '#CDA349',
-                opacity: '0.6'
-              }}></div>
-            </div>
-            
-            <div style={{ position: 'relative', marginTop: '2rem' }}>
-              <Button
-                variant="primary"
-                href="#contacto"
-                aria-label="Iniciar mi proyecto"
-                data-cta="iniciar-mi-proyecto-projects"
-              >
-                Iniciar Mi Proyecto
-              </Button>
-            </div>
-          </div>
+            Cada proyecto, una historia de precisión y diseño.
+          </p>
         </div>
       </div>
 
@@ -455,7 +460,7 @@ const Projects = () => {
       <Lightbox
         isOpen={lightboxOpen}
         onClose={closeLightbox}
-        images={filteredProjects.map(p => p.image)}
+        images={filteredProjects.flatMap(p => p.gallery || [p.image])}
         currentIndex={lightboxIndex}
         onNext={nextImage}
         onPrev={prevImage}

@@ -84,9 +84,10 @@ const Hero = () => {
           <div style={{
             width: '120px',
             height: '3px',
-            background: '#d4af37',
+            background: 'linear-gradient(90deg, #CDA349, #F4D03F)',
             margin: '0 auto',
-            borderRadius: '2px'
+            borderRadius: '2px',
+            boxShadow: '0 2px 8px rgba(205, 163, 73, 0.3)'
           }}></div>
         </div>
         
@@ -106,7 +107,7 @@ const Hero = () => {
           gap: '0.5rem'
         }}>
           <span style={{ fontSize: '1.5rem' }}>🏗️</span>
-          <span>Obras residenciales y civiles diseñadas para perdurar</span>
+          <span>Obras civiles, residenciales e industriales — entregadas a tiempo, siempre con garantía.</span>
         </div>
         
         {/* Servicios de RAMR */}

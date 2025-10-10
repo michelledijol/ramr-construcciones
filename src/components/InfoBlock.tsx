@@ -5,7 +5,7 @@ const InfoBlock = () => {
 
   return (
     <section id="info-block" style={{
-      background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%)',
+      background: 'radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, #ffffff 100%)',
       padding: '6rem 0 4rem 0',
       position: 'relative',
       overflow: 'hidden',
@@ -110,7 +110,7 @@ const InfoBlock = () => {
                        borderRadius: '8px',
                        transition: 'all 0.3s ease',
                        cursor: 'pointer',
-                       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+                       boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)'
                      }}
                      onMouseOver={(e) => {
                        e.target.style.borderColor = '#d4af37'
@@ -134,22 +134,22 @@ const InfoBlock = () => {
                        {/* Número grande debajo */}
                        <div style={{
                          fontSize: '4rem',
-                         fontWeight: '900',
+                         fontWeight: '300',
                          color: '#1a1a1a',
-                         marginBottom: '0.5rem',
-                         fontFamily: 'Playfair Display, serif',
+                         marginBottom: '1rem',
+                         fontFamily: 'Inter, sans-serif',
                          lineHeight: '0.9'
                        }}>
                          20+
                        </div>
                        <div style={{
-                         fontSize: '0.8rem',
+                         fontSize: '0.9rem',
                          color: '#6b7280',
-                         fontWeight: '500',
+                         fontWeight: '400',
                          textTransform: 'none',
                          letterSpacing: '0.3px',
                          fontFamily: 'Inter, sans-serif',
-                         lineHeight: '1.3'
+                         lineHeight: '1.4'
                        }}>
                          años acompañando a clientes
                        </div>
@@ -164,7 +164,7 @@ const InfoBlock = () => {
                        borderRadius: '8px',
                        transition: 'all 0.3s ease',
                        cursor: 'pointer',
-                       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+                       boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)'
                      }}
                      onMouseOver={(e) => {
                        e.target.style.borderColor = '#d4af37'
@@ -218,7 +218,7 @@ const InfoBlock = () => {
                        borderRadius: '8px',
                        transition: 'all 0.3s ease',
                        cursor: 'pointer',
-                       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+                       boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)'
                      }}
                      onMouseOver={(e) => {
                        e.target.style.borderColor = '#d4af37'
@@ -266,6 +266,7 @@ const InfoBlock = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </section>
   )

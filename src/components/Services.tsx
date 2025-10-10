@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from './Button'
 
 // Componente Services - Diseño consistente y profesional
 const Services = () => {
+  const [isAnimated, setIsAnimated] = useState(false)
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => {
+      setIsAnimated(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
   const services = [
     {
       id: 1,
@@ -30,7 +39,7 @@ const Services = () => {
     },
     {
       id: 3,
-      title: "Remodelación Premium",
+      title: "Reformas Premium",
       description: "Transformaciones precisas, sin sorpresas y con cronograma firme.",
       icon: "🔨",
       features: [
@@ -47,7 +56,7 @@ const Services = () => {
       icon: "📊",
       features: [
         "Análisis de mercado",
-        "Due diligence técnica", 
+        "Evaluación técnica previa", 
         "Estrategia de inversión", 
         "Seguimiento post-venta"
       ]
@@ -55,7 +64,9 @@ const Services = () => {
   ]
 
   return (
-    <section id="servicios" className="section" style={{ backgroundColor: '#ffffff' }}>
+    <section id="servicios" className="section" style={{ 
+      background: 'radial-gradient(circle at center, #FFFDF8 0%, #FFF9F2 100%)'
+    }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
         {/* Título de sección clásico */}
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
@@ -88,16 +99,34 @@ const Services = () => {
           <h2 className="section-title" style={{ fontSize: '3rem', marginBottom: '1.5rem', color: '#1a1a1a', fontFamily: 'Playfair Display, serif' }}>
             Soluciones integrales de construcción y desarrollo inmobiliario
           </h2>
-          <p className="section-subtitle" style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', color: '#4a5568', lineHeight: '1.7' }}>
-            Profesionales altamente cualificados para la ejecución de obras compuesto por Ingenieros, Jefes de Obra, Topógrafos, Técnicos, Encargados y Administrativos.
+          
+          {/* Frase puente narrativa */}
+          <p style={{
+            fontSize: '1.1rem',
+            color: '#5A5A5A',
+            maxWidth: '600px',
+            margin: '0 auto 2rem auto',
+            lineHeight: '1.5',
+            fontStyle: 'italic',
+            fontWeight: '400'
+          }}>
+            En Ramr Construcciones transformamos la experiencia técnica en proyectos que perduran.
+          </p>
+          
+          <p className="section-subtitle" style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', color: '#6b7280', lineHeight: '1.7' }}>
+            Profesionales altamente cualificados para la ejecución de obras compuesto por{' '}
+            <span style={{ color: '#CDA349', fontWeight: '500' }}>
+              Ingenieros, Jefes de Obra, Topógrafos, Técnicos, Encargados y Administrativos
+            </span>.
           </p>
         </div>
 
         {/* Grid de servicios consistente */}
         <div className="services-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(4, 1fr)', 
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(4, 280px)', 
+          gap: '3rem',
+          justifyContent: 'center',
           marginBottom: '4rem'
         }}>
           {services.map((service, index) => (
@@ -111,7 +140,7 @@ const Services = () => {
                 minHeight: '480px',
                 boxShadow: '0 6px 20px rgba(0,0,0,.06)',
                 transition: 'all 0.3s ease',
-                border: '1px solid #d4af37',
+                border: '1px solid rgba(212,175,55,0.3)',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column'
@@ -127,21 +156,34 @@ const Services = () => {
                 e.currentTarget.style.borderColor = '#d4af37'
               }}
             >
-              {/* Icono lineal dorado */}
-              <div style={{ 
-                fontSize: '2.5rem', 
-                marginBottom: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                background: 'transparent',
-                border: '2px solid #d4af37',
-                borderRadius: '12px',
-                margin: '0 auto 1.5rem',
-                color: '#d4af37'
-              }}>
+              {/* Icono con fondo circular translúcido */}
+              <div 
+                className="icon-container"
+                style={{ 
+                  fontSize: '2.5rem', 
+                  marginBottom: '1.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '70px',
+                  height: '70px',
+                  background: 'rgba(212, 175, 55, 0.1)',
+                  border: '2px solid rgba(212, 175, 55, 0.3)',
+                  borderRadius: '50%',
+                  margin: '0 auto 1.5rem',
+                  color: '#CDA349',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.boxShadow = '0 0 15px rgba(212,175,55,0.25)'
+                  e.target.style.transform = 'scale(1.03)'
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.boxShadow = 'none'
+                  e.target.style.transform = 'scale(1)'
+                }}
+              >
                 {service.icon}
               </div>
               
@@ -159,7 +201,7 @@ const Services = () => {
               
               {/* Descripción con más aire */}
               <p style={{ 
-                color: '#4a5568', 
+                color: '#5E5E5E', 
                 marginBottom: '1.5rem', 
                 lineHeight: '1.5',
                 textAlign: 'center',
@@ -229,7 +271,7 @@ const Services = () => {
             fontFamily: 'Playfair Display, serif',
             color: '#1a1a1a'
           }}>
-            ¿Tiene un proyecto en mente?
+            ¿Tienes un proyecto en mente?
           </h3>
           <p style={{ 
             fontSize: '1.3rem', 
@@ -240,8 +282,83 @@ const Services = () => {
             color: '#4a5568',
             lineHeight: '1.6'
           }}>
-            Transformemos tu visión en una realidad arquitectónica excepcional
+            Démosle forma a tu idea con precisión y diseño
           </p>
+          
+          {/* CTA final con línea de cierre */}
+          <div style={{
+            textAlign: 'center',
+            padding: '2rem',
+            background: 'radial-gradient(ellipse at center, #ffffff 0%, #FFFCF8 100%)',
+            borderRadius: '12px',
+            border: '1px solid rgba(212, 175, 55, 0.2)',
+            marginTop: '2rem',
+            position: 'relative'
+          }}>
+            {/* Línea dorada superior animada */}
+            <div style={{
+              position: 'absolute',
+              top: '0',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: isAnimated ? '60px' : '0px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #CDA349, #F4D03F)',
+              borderRadius: '1px',
+              transition: 'width 1s ease-in-out'
+            }}></div>
+            
+            {/* Línea dorada inferior animada */}
+            <div style={{
+              position: 'absolute',
+              bottom: '0',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: isAnimated ? '60px' : '0px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #CDA349, #F4D03F)',
+              borderRadius: '1px',
+              transition: 'width 1s ease-in-out'
+            }}></div>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#5A5A5A',
+              marginBottom: '1.5rem',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '400'
+            }}>
+              Cada detalle, un paso más cerca de hacerlo realidad.
+            </p>
+            <Button
+              variant="primary"
+              href="#contacto"
+              style={{
+                background: 'linear-gradient(90deg, #CDA349, #F4D03F)',
+                color: '#ffffff',
+                padding: '1rem 2rem',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(205, 163, 73, 0.3)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.background = 'linear-gradient(90deg, #D4AF37, #E2C675)'
+                e.target.style.color = '#ffffff'
+                e.target.style.transform = 'translateY(-2px)'
+                e.target.style.boxShadow = '0 6px 12px rgba(212,175,55,0.25)'
+              }}
+              onMouseOut={(e) => {
+                e.target.style.background = 'linear-gradient(90deg, #CDA349, #F4D03F)'
+                e.target.style.color = '#ffffff'
+                e.target.style.transform = 'translateY(0)'
+                e.target.style.boxShadow = '0 4px 15px rgba(205, 163, 73, 0.3)'
+              }}
+            >
+              Solicitar Presupuesto
+            </Button>
+          </div>
+          
         </div>
       </div>
     </section>

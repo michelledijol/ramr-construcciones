@@ -24,7 +24,7 @@ const Testimonials = () => {
       id: 1,
       name: "María González",
       role: "Propietaria de Villa Residencial",
-      content: "RAMR Construcciones superó todas nuestras expectativas. La calidad de los materiales y la atención al detalle son excepcionales. Nuestra casa es exactamente como la soñamos.",
+      content: "RAMR Construcciones superó nuestras expectativas: materiales de primera, atención impecable y una ejecución que convirtió nuestro sueño en realidad.",
       rating: 5,
       project: "Casa Moderna #146"
     },
@@ -32,7 +32,7 @@ const Testimonials = () => {
       id: 2,
       name: "Carlos Rodríguez",
       role: "Inversionista Inmobiliario",
-      content: "He trabajado con RAMR en múltiples proyectos y siempre entregan a tiempo y con la más alta calidad. Su profesionalismo y experiencia son incomparables en el mercado.",
+      content: "Trabajo con RAMR desde hace años: entregan siempre a tiempo, con calidad excepcional y un profesionalismo que marca la diferencia en el mercado.",
       rating: 5,
       project: "Complejo Residencial #186"
     },
@@ -40,7 +40,7 @@ const Testimonials = () => {
       id: 3,
       name: "Ana Martínez",
       role: "Arquitecta",
-      content: "Como arquitecta, valoro mucho la precisión y calidad de construcción. RAMR no solo cumple con los planos, sino que aporta soluciones innovadoras que mejoran el proyecto.",
+      content: "Como arquitecta, valoro la precisión y calidad. RAMR no solo cumple con los planos, sino que aporta soluciones innovadoras que elevan cada proyecto.",
       rating: 5,
       project: "Casa Contemporánea #148"
     },
@@ -93,8 +93,20 @@ const Testimonials = () => {
           <h2 className="section-title" style={{ fontSize: '3rem', marginBottom: '1.5rem', color: '#1a1a1a', fontFamily: 'Playfair Display, serif' }}>
             Lo que dicen nuestros clientes
           </h2>
-          <p className="section-subtitle" style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', color: '#4a5568', lineHeight: '1.7' }}>
-            La satisfacción de nuestros clientes es el mejor testimonio de nuestro compromiso con la excelencia
+          {/* Línea decorativa dorada con animación */}
+          <div style={{
+            width: '80px',
+            height: '3px',
+            background: 'linear-gradient(90deg, #D4AF37, #E2C675)',
+            margin: '0 auto 2rem',
+            borderRadius: '2px',
+            boxShadow: '0 2px 8px rgba(212, 175, 55, 0.3)',
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
+            transition: 'all 0.6s ease'
+          }}></div>
+          <p className="section-subtitle" style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 1.25rem', color: '#4a5568', lineHeight: '1.7' }}>
+            Cada proyecto deja huella. La satisfacción de nuestros clientes es la mejor prueba de nuestro compromiso con la excelencia.
           </p>
         </div>
 
@@ -111,9 +123,9 @@ const Testimonials = () => {
               style={{
                 background: '#ffffff',
                 padding: '3rem 2rem',
-                borderRadius: '12px',
-                boxShadow: '0 10px 40px rgba(0, 0, 0, 0.05)',
-                border: '1px solid #f1f5f9',
+                borderRadius: '18px',
+                boxShadow: '0 6px 18px rgba(0, 0, 0, 0.04)',
+                border: '1px solid rgba(212, 175, 55, 0.15)',
                 position: 'relative',
                 transition: 'all 0.3s ease',
                 opacity: isVisible ? 1 : 0,
@@ -122,11 +134,11 @@ const Testimonials = () => {
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.08)';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(212, 175, 55, 0.15)';
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.05)';
+                e.currentTarget.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.04)';
               }}
             >
               {/* Comillas decorativas */}
@@ -152,28 +164,60 @@ const Testimonials = () => {
                   marginBottom: '1.5rem' 
                 }}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} style={{ color: '#d4af37', fontSize: '1.2rem' }}>★</span>
+                    <span 
+                      key={i} 
+                      style={{ 
+                        background: 'linear-gradient(90deg, #D4AF37, #E2C675)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        fontSize: '1.2rem',
+                        letterSpacing: '1px'
+                      }}
+                    >★</span>
                   ))}
                 </div>
 
                 {/* Contenido del testimonio */}
-                <p className="testimonial-text">
+                <p style={{
+                  fontStyle: 'italic',
+                  lineHeight: '1.6',
+                  color: '#333',
+                  fontSize: '1rem',
+                  marginBottom: '1.5rem'
+                }}>
                   {testimonial.content}
                 </p>
 
+                {/* Línea dorada decorativa */}
+                <div style={{
+                  width: '60px',
+                  height: '2px',
+                  background: 'linear-gradient(90deg, #D4AF37, #E2C675)',
+                  margin: '16px 0',
+                  borderRadius: '2px'
+                }}></div>
+
                 {/* Información del cliente */}
-                <div style={{ borderTop: '2px solid #d4af37', paddingTop: '1.5rem' }}>
-                  <h4 className="testimonial-author">
+                <div style={{ paddingTop: '0.5rem' }}>
+                  <h4 style={{
+                    fontWeight: '700',
+                    color: '#111',
+                    marginBottom: '0.5rem',
+                    fontSize: '1.1rem'
+                  }}>
                     {testimonial.name}
                   </h4>
-                  <p className="testimonial-role">
+                  <p style={{
+                    fontSize: '14px',
+                    color: '#666',
+                    marginBottom: '0.5rem'
+                  }}>
                     {testimonial.role}
                   </p>
-                  <p style={{ 
-                    fontSize: '0.8rem', 
-                    color: '#d4af37',
-                    fontStyle: 'italic',
-                    marginTop: '0.5rem'
+                  <p style={{
+                    fontSize: '13px',
+                    color: '#C9A33A',
+                    fontStyle: 'italic'
                   }}>
                     Proyecto: {testimonial.project}
                   </p>
@@ -181,6 +225,26 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Frase narrativa de cierre */}
+        <div style={{
+          textAlign: 'center',
+          padding: '2rem 0',
+          marginTop: '1.5rem'
+        }}>
+          <p style={{
+            fontSize: '1.1rem',
+            color: '#8A8A8A',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: '400',
+            fontStyle: 'italic',
+            maxWidth: '500px',
+            margin: '0 auto',
+            lineHeight: '1.5'
+          }}>
+            Cada historia de satisfacción nos inspira a seguir construyendo con excelencia.
+          </p>
         </div>
 
         {/* CTA de testimonios */}

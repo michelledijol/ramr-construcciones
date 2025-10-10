@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './components/Hero'
+import AboutRamr from './components/AboutRamr'
 import InfoBlock from './components/InfoBlock'
 import Services from './components/Services'
 import Projects from './components/Projects'
@@ -23,6 +24,9 @@ function App() {
       <section id="inicio">
         <Hero />
       </section>
+      
+      {/* Sección Sobre Ramr - Descripción de la empresa */}
+      <AboutRamr />
       
       {/* Bloque de información horizontal - CTA y métricas */}
       <InfoBlock />

@@ -32,9 +32,17 @@ const Navigation = () => {
         <div className="nav-content">
           {/* Logo elegante */}
           <div>
-            <h1 className="logo">
-              <span>RAMR</span> Construcciones
-            </h1>
+            <a href="#inicio" style={{ textDecoration: 'none' }}>
+              <img 
+                src="/logosinfondo.png" 
+                alt="RAMR Construcciones" 
+                style={{
+                  height: '50px',
+                  width: 'auto',
+                  objectFit: 'contain'
+                }}
+              />
+            </a>
           </div>
 
           {/* Menú desktop - como las opciones del perfil */}
