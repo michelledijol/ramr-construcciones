@@ -124,8 +124,8 @@ const Services = () => {
         {/* Grid de servicios consistente */}
         <div className="services-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(4, 280px)', 
-          gap: '3rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          gap: 'clamp(1.5rem, 4vw, 3rem)',
           justifyContent: 'center',
           marginBottom: '4rem'
         }}>
@@ -136,8 +136,8 @@ const Services = () => {
               style={{ 
                 background: 'white',
                 borderRadius: '8px',
-                padding: '2.5rem',
-                minHeight: '480px',
+                padding: 'clamp(1.5rem, 4vw, 2.5rem)',
+                minHeight: 'clamp(400px, 50vh, 480px)',
                 boxShadow: '0 6px 20px rgba(0,0,0,.06)',
                 transition: 'all 0.3s ease',
                 border: '1px solid rgba(212,175,55,0.3)',
