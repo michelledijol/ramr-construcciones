@@ -1,4 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { MdConstruction } from 'react-icons/md'
+import { AiFillStar } from 'react-icons/ai'
+import { IoHome } from 'react-icons/io5'
 
 // Componente AboutRamr - Descripción de la empresa Ramr
 // Este componente muestra la historia y propósito de la empresa de construcción
@@ -227,7 +231,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                🏗️
+                <MdConstruction style={{ color: 'white', fontSize: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{
@@ -303,7 +307,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                ⭐
+                <AiFillStar style={{ color: 'white', fontSize: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{
@@ -379,7 +383,7 @@ const AboutRamr = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                🏠
+                <IoHome style={{ color: 'white', fontSize: '1.5rem' }} />
               </div>
               <div>
                 <h3 style={{

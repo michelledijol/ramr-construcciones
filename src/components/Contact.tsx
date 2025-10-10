@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { MdPhone, MdEmail, MdAccessTime } from 'react-icons/md'
+import { FaUserCircle } from 'react-icons/fa'
 
 // Componente Contact - como el botón de "Contactar" en Instagram
 const Contact = () => {
@@ -51,25 +54,25 @@ const Contact = () => {
   // Datos de contacto - como la información del perfil
   const contactInfo = [
     {
-      icon: "📞",
+      icon: <MdPhone style={{ color: '#CDA349', fontSize: '1.5rem' }} />,
       title: "Teléfono",
       details: ["1-829-717-7552"],
       action: "Llamar ahora"
     },
     {
-      icon: "📧",
+      icon: <MdEmail style={{ color: '#CDA349', fontSize: '1.5rem' }} />,
       title: "Email",
       details: ["ramrconstrucciones.srl@gmail.com"],
       action: "Enviar email"
     },
     {
-      icon: "👤",
+      icon: <FaUserCircle style={{ color: '#CDA349', fontSize: '1.5rem' }} />,
       title: "Contacto",
       details: ["Roberto Martínez", "RAMR Construcciones SRL"],
       action: "WhatsApp"
     },
     {
-      icon: "🕒",
+      icon: <MdAccessTime style={{ color: '#CDA349', fontSize: '1.5rem' }} />,
       title: "Horarios",
       details: ["Lun - Vie: 8:00 - 18:00", "Sáb: 9:00 - 14:00"],
       action: "Consultar disponibilidad"

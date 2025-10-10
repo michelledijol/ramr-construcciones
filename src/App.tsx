@@ -10,6 +10,10 @@ import Popup from './components/Popup'
 import StickyCTA from './components/StickyCTA'
 import Button from './components/Button'
 import { useExitIntent } from './hooks/useExitIntent'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { MdEmail } from 'react-icons/md'
+import { IoLogoWhatsapp } from 'react-icons/io5'
+import { FaUserCircle } from 'react-icons/fa'
 
 // Componente principal de la aplicación - Diseño tipo moodboard constructora
 function App() {
@@ -145,8 +149,9 @@ function App() {
               fontFamily: 'Inter, sans-serif',
               lineHeight: '1.6'
             }}>
-              <p style={{ margin: '0.5rem 0', fontWeight: '500' }}>
-                📧 Email: <a 
+              <p style={{ margin: '0.5rem 0', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <MdEmail style={{ color: '#CDA349', fontSize: '1.2rem' }} />
+                Email: <a 
                   href="mailto:ramrconstrucciones.srl@gmail.com" 
                   style={{ 
                     color: '#CDA349', 
@@ -165,8 +170,9 @@ function App() {
                   }}
                 >ramrconstrucciones.srl@gmail.com</a>
               </p>
-              <p style={{ margin: '0.5rem 0', fontWeight: '500' }}>
-                📱 WhatsApp: <a 
+              <p style={{ margin: '0.5rem 0', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <IoLogoWhatsapp style={{ color: '#25D366', fontSize: '1.2rem' }} />
+                WhatsApp: <a 
                   href="https://wa.me/18297177552" 
                   style={{ 
                     color: '#CDA349', 
@@ -187,8 +193,9 @@ function App() {
                   }}
                 >1-829-717-7552</a>
               </p>
-              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', color: '#9ca3af' }}>
-                👤 Roberto Martínez - RAMR Construcciones SRL
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', color: '#9ca3af', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <FaUserCircle style={{ color: '#CDA349', fontSize: '1rem' }} />
+                Roberto Martínez - RAMR Construcciones SRL
               </p>
             </div>
           </div>

@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Button from './Button'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { IoHome } from 'react-icons/io5'
+import { MdApartment } from 'react-icons/md'
+import { FaHammer } from 'react-icons/fa'
+import { IoStatsChart } from 'react-icons/io5'
 
 // Componente Services - Diseño consistente y profesional
 const Services = () => {
@@ -26,7 +31,7 @@ const Services = () => {
       id: 1,
       title: "Construcción Residencial",
       description: "Hogares de alto estándar con planificación 3D, control de calidad y garantía por escrito.",
-      icon: "🏠",
+      icon: <IoHome style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
       features: [
         "Diseño 3D para decidir antes de construir",
         "Materiales certificados", 
@@ -38,7 +43,7 @@ const Services = () => {
       id: 2,
       title: "Desarrollo Comercial",
       description: "Espacios que maximizan rentabilidad y operatividad desde el día uno.",
-      icon: "🏢",
+      icon: <MdApartment style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
       features: [
         "Ubicación y normativas",
         "Rentabilidad prevista y plazos claros", 
@@ -50,7 +55,7 @@ const Services = () => {
       id: 3,
       title: "Reformas Premium",
       description: "Transformaciones precisas, sin sorpresas y con cronograma firme.",
-      icon: "🔨",
+      icon: <FaHammer style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
       features: [
         "Auditoría estructural",
         "Presupuesto detallado", 
@@ -62,7 +67,7 @@ const Services = () => {
       id: 4,
       title: "Consultoría Inmobiliaria",
       description: "Decisiones de inversión con datos, riesgos y plazos claros.",
-      icon: "📊",
+      icon: <IoStatsChart style={{ color: '#CDA349', fontSize: '2.5rem' }} />,
       features: [
         "Análisis de mercado",
         "Evaluación técnica previa", 

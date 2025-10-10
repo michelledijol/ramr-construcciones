@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Button from './Button'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { AiFillStar } from 'react-icons/ai'
+import { MdAccessTime, MdApartment } from 'react-icons/md'
+import { IoCheckmarkCircle } from 'react-icons/io5'
 
 const InfoBlock = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -97,9 +101,14 @@ const InfoBlock = () => {
                   fontWeight: '600',
                   textTransform: 'uppercase',
                   letterSpacing: '1px',
-                  fontFamily: 'Inter, sans-serif'
+                  fontFamily: 'Inter, sans-serif',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem'
                 }}>
-                  ⭐ 20 años de experiencia
+                  <AiFillStar style={{ color: 'white', fontSize: '1rem' }} />
+                  20 años de experiencia
                 </div>
               </div>
               
@@ -135,9 +144,11 @@ const InfoBlock = () => {
                     fontSize: isMobile ? '2rem' : '2.5rem',
                     color: '#d4af37',
                     marginBottom: isMobile ? '1rem' : '1.5rem',
-                    fontFamily: 'Inter, sans-serif'
+                    fontFamily: 'Inter, sans-serif',
+                    display: 'flex',
+                    justifyContent: 'center'
                   }}>
-                    🕐
+                    <MdAccessTime style={{ fontSize: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{
@@ -189,9 +200,11 @@ const InfoBlock = () => {
                     fontSize: isMobile ? '2rem' : '2.5rem',
                     color: '#d4af37',
                     marginBottom: isMobile ? '1rem' : '1.5rem',
-                    fontFamily: 'Inter, sans-serif'
+                    fontFamily: 'Inter, sans-serif',
+                    display: 'flex',
+                    justifyContent: 'center'
                   }}>
-                    🏢
+                    <MdApartment style={{ fontSize: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{
@@ -243,9 +256,11 @@ const InfoBlock = () => {
                     fontSize: isMobile ? '2rem' : '2.5rem',
                     color: '#d4af37',
                     marginBottom: isMobile ? '1rem' : '1.5rem',
-                    fontFamily: 'Inter, sans-serif'
+                    fontFamily: 'Inter, sans-serif',
+                    display: 'flex',
+                    justifyContent: 'center'
                   }}>
-                    ✅
+                    <IoCheckmarkCircle style={{ fontSize: isMobile ? '2rem' : '2.5rem', color: '#d4af37' }} />
                   </div>
                   {/* Número grande debajo */}
                   <div style={{

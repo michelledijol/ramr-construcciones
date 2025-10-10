@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import Button from './Button'
+// Imports para iconos - reemplazando emojis por iconos profesionales
+import { MdConstruction } from 'react-icons/md'
+import { AiFillStar } from 'react-icons/ai'
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -107,7 +110,10 @@ const Hero = () => {
           gap: '0.5rem',
           fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)'
         }}>
-          <span style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>🏗️</span>
+          <MdConstruction style={{ 
+            fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', 
+            color: '#d4af37' 
+          }} />
           <span>Obras civiles, residenciales e industriales — entregadas a tiempo, siempre con garantía.</span>
         </div>
         
@@ -277,7 +283,10 @@ const Hero = () => {
             textAlign: 'center',
             padding: '0 1rem'
           }}>
-            <span style={{ color: '#d4af37', fontSize: 'clamp(1rem, 2.5vw, 1.1rem)' }}>⭐</span>
+            <AiFillStar style={{ 
+              color: '#d4af37', 
+              fontSize: 'clamp(1rem, 2.5vw, 1.1rem)' 
+            }} />
             <span>+200 proyectos residenciales y civiles entregados con éxito en 20 años de experiencia</span>
           </div>
         </div>
