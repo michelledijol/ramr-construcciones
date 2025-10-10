@@ -62,9 +62,12 @@ const Button: React.FC<ButtonProps> = ({
     'aria-label': ariaLabel,
     'data-cta': dataCta,
     onClick: (e: React.MouseEvent) => {
-      e.preventDefault();
       handleClick();
       handleAnalytics();
+      // No prevenir el comportamiento por defecto para enlaces
+      if (!href) {
+        e.preventDefault();
+      }
     },
     disabled: disabled || loading
   };
